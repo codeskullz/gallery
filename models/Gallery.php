@@ -20,4 +20,8 @@ class Gallery extends Model
      */
     public $rules = [
     ];
+
+    public $belongsTo = [
+        'foto' => Fotos::class,
+    ];
 }

@@ -20,4 +20,8 @@ class Categorieen extends Model
      */
     public $rules = [
     ];
+
+    public $belongsTo = [
+        'foto' => Fotos::class,
+    ];
 }
