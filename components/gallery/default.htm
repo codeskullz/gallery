@@ -1,3 +1,5 @@
-<p>This is the default markup for component gallery</p>
+{% for photo in __SELF__.foto.photos %}
+    {{ photo.getThumb(600, 400) }}
+{% endfor %}
 
-<small>You can delete this file if you want</small>
+{{ dump() }}

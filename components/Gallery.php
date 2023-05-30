@@ -24,4 +24,11 @@ class Gallery extends ComponentBase
     {
         return [];
     }
+
+    public function onRun()
+    {
+        // define this as public $foto;
+        $this->foto = Gallery::with('photos')->first();
+    }
+
 }
