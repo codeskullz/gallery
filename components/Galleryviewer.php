@@ -1,7 +1,7 @@
 <?php namespace Nielsvandendries\Gallery\Components;
 
 use Cms\Classes\ComponentBase;
-use Nielsvandendries\Gallery\Models\Gallery;
+use Nielsvandendries\Gallery\Models\Fotos;
 
 /**
  * Galleryviewer Component
@@ -29,6 +29,6 @@ class Galleryviewer extends ComponentBase
     public function onRun()
     {
         // define this as public $foto;
-        $this->foto = Gallery::with('photos')->first();
+        $this->images = fotos::with('photos')->first();
     }
 }
