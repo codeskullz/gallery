@@ -1,0 +1,11 @@
+name: Categorieen
+modelClass: NielsVanDenDries\Gallery\Models\Categorieen
+form: $/nielsvandendries/gallery/models/categorieen/fields.yaml
+defaultRedirect: nielsvandendries/gallery/categorieen
+create:
+    redirect: 'nielsvandendries/gallery/categorieen/update/:id'
+    redirectClose: nielsvandendries/gallery/categorieen
+update:
+    redirect: nielsvandendries/gallery/categorieen
+    redirectClose: nielsvandendries/gallery/categorieen
+preview: {  }

@@ -1,0 +1,28 @@
+fields:
+    naam:
+        label: Naam
+        span: auto
+        type: text
+    photos:
+        label: 'Foto upload'
+        span: full
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        type: fileupload
+    categorie:
+        label: Categorieen
+        span: auto
+        nameFrom: Categorieen
+        descriptionFrom: Categorieen
+        select: naam
+        type: relation
+    gallery:
+        label: Gallery
+        span: auto
+        nameFrom: gallery
+        descriptionFrom: gallery
+        select: naam
+        type: relation

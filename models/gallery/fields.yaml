@@ -1,0 +1,5 @@
+fields:
+    naam:
+        label: Gallery
+        span: auto
+        type: text

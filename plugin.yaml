@@ -1,0 +1,36 @@
+plugin:
+    name: 'nielsvandendries.gallery::lang.plugin.name'
+    description: 'nielsvandendries.gallery::lang.plugin.description'
+    author: 'Niels van den Dries'
+    icon: oc-icon-file-photo-o
+    homepage: ''
+permissions:
+    gallery:
+        tab: 'nielsvandendries.gallery::lang.plugin.name'
+        label: 'Gallery Manager'
+navigation:
+    main-menu-item:
+        label: 'Image Gallerys'
+        url: /
+        icon: icon-photo
+        permissions:
+            - gallery
+        sideMenu:
+            side-menu-item:
+                label: 'Foto''s'
+                url: nielsvandendries/gallery/fotos
+                icon: icon-photo
+                permissions:
+                    - gallery
+            side-menu-item2:
+                label: Galleries
+                url: nielsvandendries/gallery/galleries
+                icon: icon-list-alt
+                permissions:
+                    - gallery
+            side-menu-item3:
+                label: Categorieen
+                url: nielsvandendries/gallery/categorieen
+                icon: icon-sitemap
+                permissions:
+                    - gallery

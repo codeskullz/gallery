@@ -1,0 +1,11 @@
+name: Fotos
+modelClass: NielsVanDenDries\Gallery\Models\Fotos
+form: $/nielsvandendries/gallery/models/fotos/fields.yaml
+defaultRedirect: nielsvandendries/gallery/fotos
+create:
+    redirect: 'nielsvandendries/gallery/fotos/update/:id'
+    redirectClose: nielsvandendries/gallery/fotos
+update:
+    redirect: nielsvandendries/gallery/fotos
+    redirectClose: nielsvandendries/gallery/fotos
+preview: {  }

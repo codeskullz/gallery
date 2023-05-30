@@ -1,0 +1,11 @@
+name: Galleries
+modelClass: NielsVanDenDries\Gallery\Models\Gallery
+form: $/nielsvandendries/gallery/models/gallery/fields.yaml
+defaultRedirect: nielsvandendries/gallery/galleries
+create:
+    redirect: 'nielsvandendries/gallery/galleries/update/:id'
+    redirectClose: nielsvandendries/gallery/galleries
+update:
+    redirect: nielsvandendries/gallery/galleries
+    redirectClose: nielsvandendries/gallery/galleries
+preview: {  }
