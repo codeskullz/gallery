@@ -30,5 +30,4 @@ class Gallery extends ComponentBase
         // define this as public $foto;
         $this->foto = Gallery::with('photos')->first();
     }
-
 }
