@@ -7,7 +7,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Nielsvandendries\Gallery\Components\Gallery' => 'Gallery'
+            'Nielsvandendries\Gallery\Components\Galleryviewer' => 'Galleryviewer'
         ];
     }
 

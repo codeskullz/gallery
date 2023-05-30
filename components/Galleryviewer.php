@@ -1,20 +1,19 @@
 <?php namespace Nielsvandendries\Gallery\Components;
 
 use Cms\Classes\ComponentBase;
-use Nielsvandendries\Gallery\Models\Gallery as GalleryModel;
 
 /**
- * Gallery Component
+ * Galleryviewer Component
  *
  * @link https://docs.octobercms.com/3.x/extend/cms-components.html
  */
-class Gallery extends ComponentBase
+class Galleryviewer extends ComponentBase
 {
     public function componentDetails()
     {
         return [
-            'name' => 'Gallery',
-            'description' => 'Show Gallery'
+            'name' => 'Galleryviewer Component',
+            'description' => 'No description provided yet...'
         ];
     }
 
