@@ -1,6 +1,7 @@
 <?php namespace Nielsvandendries\Gallery\Components;
 
 use Cms\Classes\ComponentBase;
+use Nielsvandendries\Gallery\Models\Gallery;
 
 /**
  * Galleryviewer Component
