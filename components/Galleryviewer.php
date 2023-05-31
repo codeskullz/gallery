@@ -29,8 +29,6 @@ class Galleryviewer extends ComponentBase
 
     public function onRun()
     {
-        $this->item = Fotos::where('naam', $this->property('naam'))->get()->toArray();
-
         $fotos = Fotos::with('fotos')->first();
     
         $photoDetails = [];
