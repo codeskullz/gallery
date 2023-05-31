@@ -24,13 +24,4 @@ class Fotos extends Model
     public $attachMany = [
         'photos' => \System\Models\File::class
     ];
-
-    public $hasMany = [
-        'categorie' => Categorieen::class,
-    ];
-
-    public $hasOne = [
-        'gallery' => Gallery::class,
-    ];
-
 }

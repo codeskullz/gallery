@@ -1,5 +1,0 @@
-fields:
-    naam:
-        label: Categorie
-        span: auto
-        type: text

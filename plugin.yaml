@@ -22,15 +22,3 @@ navigation:
                 icon: icon-photo
                 permissions:
                     - gallery
-            side-menu-item2:
-                label: Galleries
-                url: nielsvandendries/gallery/galleries
-                icon: icon-list-alt
-                permissions:
-                    - gallery
-            side-menu-item3:
-                label: Categorieen
-                url: nielsvandendries/gallery/categorieen
-                icon: icon-sitemap
-                permissions:
-                    - gallery
