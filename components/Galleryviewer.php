@@ -30,6 +30,6 @@ class Galleryviewer extends ComponentBase
     public function onRun()
     {
         // define this as public $foto;
-        $this->images = Fotos::with('fotos')->first();
+        $this->photos = Fotos::with('fotos')->first();
     }
 }

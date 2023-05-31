@@ -1,7 +1,5 @@
-<code>
-    {% for images in __SELF__.foto.photos %}
-        {{ images.getThumb(600, 400) }}
-    {% endfor %}
-</code>
+{% for photo in images.fotos %}
+    <img src="{{ photo.image.path }}" alt="{{ photo.title }}">
+{% endfor %}
 
 {{ dump() }}
