@@ -4,19 +4,14 @@
 <div class="m-2">
     {% if photoDetails %}
         {% for photoDetail in photoDetails %}
-            <div class="card" style="width: 12rem;">
-                <img src="{{ photoDetail.url }}" class="card-img-top" alt="{{ photoDetail.title }}">
-                <div class="card-body">
-                    <h5 class="card-title">{{ photoDetail.title }}</h5>
-                    <p class="card-text">{{ photoDetail.description }}</p>
-                </div>
-            </div>
+                <img src="{{ photoDetail.url }}" alt="{{ photoDetail.title }}" style="height: 150px;">
+                {# <h5>{{ photoDetail.title }}</h5> #}
+                {# <p>{{ photoDetail.description }}</p> #}
         {% endfor %}
     {% else %}
-        <p>No photos found.</p>
+        <div class="alert alert-danger" role="alert">
+            No photos found.
+        </div>
     {% endif %}
-
 </div>
-
-{{ dump() }}
 
