@@ -1,5 +1,7 @@
 {% for photo in images.fotos %}
-    <img src="{{ photo.image.path }}" alt="{{ photo.title }}">
+    <img src="{{ photo.path }}" alt="{{ photo.title }}">
 {% endfor %}
+
+
 
 {{ dump() }}
