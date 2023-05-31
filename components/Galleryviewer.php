@@ -10,6 +10,7 @@ use Nielsvandendries\Gallery\Models\Fotos;
  */
 class Galleryviewer extends ComponentBase
 {
+    public $fotos;
     public function componentDetails()
     {
         return [
@@ -29,6 +30,6 @@ class Galleryviewer extends ComponentBase
     public function onRun()
     {
         // define this as public $foto;
-        $this->images = Fotos::with('photos')->first();
+        $this->images = Fotos::with('fotos')->first();
     }
 }

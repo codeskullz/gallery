@@ -3,12 +3,12 @@ fields:
         label: 'Gallery Naam'
         span: auto
         type: text
-    photos:
+    fotos:
         label: 'Foto upload'
-        span: full
         mode: image
         useCaption: true
         thumbOptions:
             mode: crop
             extension: auto
+        span: full
         type: fileupload

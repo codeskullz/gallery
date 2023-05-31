@@ -22,6 +22,6 @@ class Fotos extends Model
     ];
 
     public $attachMany = [
-        'photos' => \System\Models\File::class
+        'fotos' => \System\Models\File::class
     ];
 }
