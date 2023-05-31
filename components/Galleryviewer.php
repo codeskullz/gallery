@@ -10,7 +10,7 @@ use Nielsvandendries\Gallery\Models\Fotos;
  */
 class Galleryviewer extends ComponentBase
 {
-    public $fotos;
+    public $images;
     public function componentDetails()
     {
         return [
@@ -30,7 +30,14 @@ class Galleryviewer extends ComponentBase
     public function onRun()
     {
         $fotos = Fotos::with('fotos')->first();
-        // Controleer of de relatie correct wordt opgehaald
-        // dd($fotos->fotos);
+    
+        $photoDetails = [];
+    
+        if ($fotos) {
+            $photoDetails = $fotos->photoDetails;
+        }
+    
+        $this->page['photoDetails'] = $photoDetails;
     }
+
 }
