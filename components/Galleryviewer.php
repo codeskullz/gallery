@@ -12,6 +12,7 @@ class Galleryviewer extends ComponentBase
 {
     public $images;
     public $item;
+    public $gallery;
 
     public function componentDetails()
     {
@@ -42,6 +43,8 @@ class Galleryviewer extends ComponentBase
 
     public function onRun()
     {
+        $this->gallery = Fotos::get()->toArray();
+
         $this->item = Fotos::where('naam', $this->property('naam'))->get()->toArray();
 
         $fotos = Fotos::with('fotos')->first();
