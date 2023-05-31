@@ -20,9 +20,6 @@ class Galleryviewer extends ComponentBase
         ];
     }
 
-    /**
-     * @link https://docs.octobercms.com/3.x/element/inspector-types.html
-     */
     public function defineProperties()
     {
     }

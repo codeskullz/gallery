@@ -2,22 +2,12 @@
 
 use Model;
 
-/**
- * Model
- */
 class Fotos extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
-
-    /**
-     * @var string The database table used by the model.
-     */
     public $table = 'nielsvandendries_gallery_photos';
 
-    /**
-     * @var array Validation rules
-     */
     public $rules = [
     ];
 
@@ -34,7 +24,6 @@ class Fotos extends Model
                 'url' => $photo->getPath(),
                 'title' => $photo->title,
                 'description' => $photo->description,
-                // Voeg hier eventueel andere velden toe die je wilt weergeven
             ];
         }
 
