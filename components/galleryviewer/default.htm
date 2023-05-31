@@ -4,13 +4,15 @@
 <div class="m-2">
     {% if photoDetails %}
         {% for photoDetail in photoDetails %}
-                <img src="{{ photoDetail.url }}" alt="{{ photoDetail.title }}" style="height: 150px;">
+            <a href="{{ photoDetail.url }}">
+                <img src="{{ photoDetail.url }}" class="img-thumbnail" alt="{{ photoDetail.title }}" style="height: 150px;">
+            </a>
                 {# <h5>{{ photoDetail.title }}</h5> #}
                 {# <p>{{ photoDetail.description }}</p> #}
         {% endfor %}
     {% else %}
         <div class="alert alert-danger" role="alert">
-            No photos found.
+            Geen foto's opgeslagen
         </div>
     {% endif %}
 </div>

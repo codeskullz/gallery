@@ -11,6 +11,8 @@ use Nielsvandendries\Gallery\Models\Fotos;
 class Galleryviewer extends ComponentBase
 {
     public $images;
+    public $item;
+
     public function componentDetails()
     {
         return [
@@ -24,11 +26,24 @@ class Galleryviewer extends ComponentBase
      */
     public function defineProperties()
     {
-        return [];
+        return [
+            'name' => [
+                'title'             => 'naam',
+                'description'       => 'Select the Gallery',
+                'type'              => 'dropdown',
+            ]
+        ];
+    }
+
+    public function getnameOptions()
+    {
+        return Fotos::get()->lists('naam', 'naam');
     }
 
     public function onRun()
     {
+        $this->item = Fotos::where('naam', $this->property('naam'))->get()->toArray();
+
         $fotos = Fotos::with('fotos')->first();
     
         $photoDetails = [];
