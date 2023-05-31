@@ -1,0 +1,15 @@
+{
+    "name": "nielsvandendries/gallery-plugin",
+    "type": "october-plugin",
+    "description": "It is a very simple photogallery.",
+    "require": {
+        "composer/installers": "~1.0",
+    },
+    "authors": [
+        {
+            "name": "Niels van den Dries",
+            "email": "niels@nvandendries.nl",
+            "role": "Founder"
+        }
+    ]
+}
