@@ -10,7 +10,7 @@ use Nielsvandendries\Gallery\Models\Fotos;
  */
 class Galleryviewer extends ComponentBase
 {
-    public $item;
+    public $gallery;
 
     public function componentDetails()
     {
@@ -38,6 +38,9 @@ class Galleryviewer extends ComponentBase
         }
     
         $this->page['photoDetails'] = $photoDetails;
+
+        $this->gallery = Fotos::get()->toArray();
+
     }
 
 }
