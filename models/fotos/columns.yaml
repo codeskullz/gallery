@@ -1,6 +1,6 @@
 columns:
     naam:
-        label: naam
+        label: 'Gallery Naam'
         type: text
         searchable: true
         sortable: true

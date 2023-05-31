@@ -1,6 +1,6 @@
 fields:
     naam:
-        label: Naam
+        label: 'Gallery Naam'
         span: auto
         type: text
     photos:

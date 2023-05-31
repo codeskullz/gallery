@@ -17,7 +17,7 @@ navigation:
             - gallery
         sideMenu:
             side-menu-item:
-                label: 'Foto''s'
+                label: Galleries
                 url: nielsvandendries/gallery/fotos
                 icon: icon-photo
                 permissions:
