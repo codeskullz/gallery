@@ -10,14 +10,13 @@ use Nielsvandendries\Gallery\Models\Fotos;
  */
 class Galleryviewer extends ComponentBase
 {
-    public $item;
     public $gallery;
 
     public function componentDetails()
     {
         return [
-            'name' => 'Galleryviewer Component',
-            'description' => 'No description provided yet...'
+            'name' => 'Galleryviewer',
+            'description' => 'Displays a gallery of you choise'
         ];
     }
 
@@ -40,20 +39,12 @@ class Galleryviewer extends ComponentBase
 
     public function onRun()
     {
-        $this->item = Fotos::where('naam', $this->property('naam'))->get()->toArray();
-
-        $fotos = Fotos::with('fotos')->first();
-    
+        $fotos = Fotos::with('fotos')->where('naam', $this->property('naam'))->first();
         $photoDetails = [];
-    
         if ($fotos) {
             $photoDetails = $fotos->photoDetails;
         }
-    
         $this->page['photoDetails'] = $photoDetails;
-
         $this->gallery = Fotos::get()->toArray();
-
     }
-
 }

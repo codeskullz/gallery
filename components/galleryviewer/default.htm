@@ -1,22 +1,21 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
-<section>
-    {% set gallery = __SELF__.gallery %}
-        {% for gallery in gallery %}
-            <h3>Gallery: {{ gallery.naam }}</h3>
-            {% if photoDetails %}
-                {% for photoDetail in photoDetails %}
-                    <a href="{{ photoDetail.url }}" style="text-decoration: none;">
-                        <img src="{{ photoDetail.url }}" class="img-thumbnail" alt="{{ photoDetail.title }}" style="height: 150px;">
-                    </a>
-                    {# <h5>{{ photoDetail.title }}</h5> #}
-                    {# <p>{{ photoDetail.description }}</p> #}
-                {% endfor %}
-            {% else %}
-                <div class="alert alert-danger" role="alert">
-                    Geen foto's opgeslagen
-                </div>
-            {% endif %}
+<section id="title">
+    {% set Galleryviewer = __SELF__.gallery %}
+    {% for gallery in Galleryviewer %}
+        <h3>{{ gallery.naam }}</h3>
     {% endfor %}
+
+</section>
+<section id="gallery">
+    {% for photoDetail in photoDetails %}
+        <a href="{{ photoDetail.url }}" style="text-decoration: none;">
+            <img src="{{ photoDetail.url }}" class="img-thumbnail" alt="{{ photoDetail.title }}" style="height: 150px;">
+        </a>
+    {% endfor %}
+</section>
+
+<section id="debug">
+    {{ dump() }}
 </section>
