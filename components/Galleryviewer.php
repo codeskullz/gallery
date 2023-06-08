@@ -41,9 +41,9 @@ class Galleryviewer extends ComponentBase
     {
         $fotos = Fotos::with('fotos')->where('naam', $this->property('naam'))->first();
         $photoDetails = [];
-        if ($fotos) {
-            $photoDetails = $fotos->photoDetails;
-        }
+            if ($fotos) {
+                $photoDetails = $fotos->photoDetails;
+            }
         $this->page['photoDetails'] = $photoDetails;
         $this->gallery = Fotos::get()->toArray();
     }
