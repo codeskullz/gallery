@@ -22,24 +22,11 @@ class Galleryviewer extends ComponentBase
 
     public function defineProperties()
     {
-        return [
-            'naam' => [
-                'title'             => 'Gallery',
-                'description'       => 'Watch the Simpson',
-                'type'              => 'dropdown',
-            ]
-        ];
-    }
-
-    // Functie de de gegevens ophaalt uit de database
-    public function getNaamOptions()
-    {
-        return Fotos::get()->lists('naam', 'naam');
     }
 
     public function onRun()
     {
-        $fotos = Fotos::with('fotos')->where('naam', $this->property('naam'))->first();
+        $fotos = Fotos::first();
         $photoDetails = [];
             if ($fotos) {
                 $photoDetails = $fotos->photoDetails;
