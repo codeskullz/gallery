@@ -15,7 +15,7 @@ class Galleryviewer extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name' => 'Galleryviewer',
+            'name' => 'Gallery Viewer',
             'description' => 'Displays a gallery of you choise'
         ];
     }
